@@ -1,1 +1,1 @@
-java -cp target/piTempReader-1.0.jar com.stevenstier.App
+java -cp target/prmTempDataCollector-1.0.jar com.stevenstier.App

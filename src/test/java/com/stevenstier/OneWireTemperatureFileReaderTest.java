@@ -1,5 +1,4 @@
 package com.stevenstier;
-import com.stevenstier.OneWireTemperatureFileReader;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
