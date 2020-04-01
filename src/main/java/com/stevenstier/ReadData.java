@@ -18,7 +18,6 @@ public class ReadData
   //location of the Historian API
   //private static final String BASE_URL = "http://prm-test.herokuapp.com/api/variableHistory";
   private static final String BASE_URL = "http://192.168.100.136:8080/PRM-Historian/api/variableHistory";
-
   private HistorianValueDAO historianValueDAO;
   private OneWireTemperatureFileReader oneWireTemperatureFileReader;
 
