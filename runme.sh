@@ -1,1 +1,1 @@
-java -cp target/prmTempDataCollector-1.0.jar com.stevenstier.App
+java -jar target/PRM-ReadTempData-1.0-jar-with-dependencies.jar com.stevenstier.ReadData

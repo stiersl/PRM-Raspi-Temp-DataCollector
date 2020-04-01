@@ -12,6 +12,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+    <!-- Unit test tools -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -49,9 +50,48 @@
   <build>
   <plugins>
     <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>3.2.0</version>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>>com.stevenstier.ReadData</mainClass>
+						<addClasspath>true</addClasspath>
+					</manifest>
+				</archive>
+			</configuration>
+		</plugin>
+    <!-- JAVA COMPILER -->
+    <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-compiler-plugin</artifactId>
       <version>3.8.1</version>
+    </plugin>
+    <!-- Add all libraries to the JAR file. -->
+    <plugin>
+			  <artifactId>maven-assembly-plugin</artifactId>
+			  <version>3.2.0</version>
+        <configuration>
+          <descriptorRefs>
+				  	<descriptorRef>jar-with-dependencies</descriptorRef>
+				  </descriptorRefs>
+				<archive>
+					<manifest>
+						<mainClass>com.stevenstier.ReadData</mainClass>
+						<addClasspath>true</addClasspath>
+					</manifest>
+				</archive>
+      </configuration>
+      <executions>
+				<execution>
+					  <id>make-assembly</id> <!-- this is used for inheritance merges -->
+					  <phase>package</phase> <!-- bind to the packaging phase -->
+					  <goals>
+						  <goal>single</goal>
+					  </goals>
+				</execution>
+      </executions>
     </plugin>
    </plugins>
   </build>
