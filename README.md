@@ -7,7 +7,7 @@ Java Application which runs on a RaspPi which
 Tested Hardware--
  RaspBerry PI 3 Model B+ ( loaded with Raspian Buster (10))
  installed java, maven,  
- sudo apt-get install oracle-java8-installer
+  sudo apt-get install openjdk-11-jdk
  
  DS18B20 Temperature Probe 
 
