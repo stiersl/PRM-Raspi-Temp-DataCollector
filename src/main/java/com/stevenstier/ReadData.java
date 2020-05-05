@@ -22,10 +22,13 @@ public class ReadData
   private OneWireTemperatureFileReader oneWireTemperatureFileReader;
 
   public static void main(String[] args) {
+    System.out.println("************************************");
     System.out.println("*****Temp Read Program Starting*****");
+    System.out.println("************************************");
+    System.out.println("**TO: " + BASE_URL);
     ReadData application = new ReadData();
     application.run();
-    System.out.println("*****Program Exiting*****");
+    System.out.println("**********Program Exiting***********");
   }
   public ReadData() {
     historianValueDAO = new RestHistorianValueDao(BASE_URL);
@@ -51,6 +54,7 @@ public class ReadData
           int quality = 192;
           // send a post request to API to write the datapoint
           historianValueDAO.insertHistorianValue(VAR_ID, sampletime, currentMeasurement, quality);
+          System.out.println("**********Measurment Sent***********");
           lastMeasurement = currentMeasurement;
         }
        
