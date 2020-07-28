@@ -11,6 +11,7 @@ public class ReadData
   private static final String W1_DEVICE_PATH = "/sys/bus/w1/devices/";
   // device name with the above path //
   private static final String DEVICE_NAME = "28-0000081bf384";
+  //private static final String DEVICE_NAME = "28-00000880474d";
   // Name of file to read
   private static final String FILE_NAME = "/w1_slave";
   // Variable ID of the variable to write to - see the variables table
